@@ -3,18 +3,19 @@ Projekt - Music Logbook
 
 ### Länk till körbar applikation
 
-[Music Logbook](http://mianygren.nu/MusicLogbook)
+- [Music Logbook](http://mianygren.nu/MusicLogbook)
 
 ### Användarfall
 
 - [Användarfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Anv%C3%A4ndarfall.pdf)
+
   *Jag implementerade även att man kan välja huvudinstument + registrera användare*
   *(Dessa hann jag inte lägga till som användarfall i efterhand)*
   *Användarfall 10 - Rate progress hann jag inte med att implementera.*
 
 ### Klassdiagram
 
-[Klassdiagram](http://www.mianygren.nu/PHP-1DV408/Projekt/klassdiagram.pdf)
+- [Klassdiagram](http://www.mianygren.nu/PHP-1DV408/Projekt/klassdiagram.pdf)
 
 ### Testfall 
 
