@@ -3,6 +3,7 @@ Projekt - Music Logbook
 
 ### Länk till körbar applikation
 
+**Använd CHROME som webbläsare för testning (funkar i Firefox men ser inte lika bra ut)**
 - [Music Logbook](http://mianygren.nu/MusicLogbook)
 
 ### Användarfall
@@ -20,7 +21,7 @@ Projekt - Music Logbook
 ### Testfall 
 
 - [Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
-*Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen*
+*(Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen)*
 - [Testrapport](http://mianygren.nu/MusicLogbook)
 
 
@@ -34,7 +35,7 @@ Projekt - Music Logbook
  		 - css
  		 - helpers
  		 - src
- 		 -db
+ 		 - db
   	  
 * Importera databasen musiclogbook.sql till er databas för webhotellet. 
 
