@@ -67,7 +67,7 @@ class SongView {
 		$html .= "<label for='" . self::$name . "'>Name: </label>";
 		$html .= "<input type='text' name='".self::$name."' />";
 		$html .= "<input type='submit' value='Add song' id='submit'/>";
-		$html .= "<div class='errorMessage'><p>". $this->sessionHelper->getAlert() ."</p></div>";
+		$html .= "<div class='errorMessage'><p>". $this->sessionHelper->getAlert()."</p></div>";
 		$html .= "</form>";
 		$html .= "</div>";
 		return $html;

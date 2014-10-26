@@ -81,9 +81,7 @@ class SongController {
 				
 				$songID = $this->songRepository->add($song);
 			
-				if($songID == null) {	
-					\view\NavigationView::RedirectToAddSong();
-				}else {
+				if($songID != null) {	
 					\view\NavigationView::RedirectToSong($songID);
 				}
 			}

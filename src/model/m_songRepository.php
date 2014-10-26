@@ -61,7 +61,6 @@ class SongRepository extends base\Repository {
 
 	
 	public function nameAlreadyExists($name, $instrumentID) {
-		
 			$db = $this->connection();
 			$sql = "SELECT * FROM $this->dbTable WHERE `" .self::$name . "` = ? AND `" .self::$instrumentID . "` = ?";
 			$params = array($name, $instrumentID );
