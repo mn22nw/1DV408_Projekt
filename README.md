@@ -15,8 +15,8 @@ Projekt - Music Logbook
 
 ### Testfall 
 
--[Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
--[Testrapport](http://mianygren.nu/MusicLogbook)
+- [Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
+- [Testrapport](http://mianygren.nu/MusicLogbook)
 
 
 ### Checklista för release på nytt webbhotell
