@@ -1,0 +1,646 @@
+@charset "UTF-8";
+@import url("base.css");
+
+	/** Inställningar för den högra kolumnen*
+---------------------------------------------------------------------- */
+	#fluid {		float: right;
+					width: 100%; 
+					min-height:800px;
+					height:100%;
+					height:auto !important;  
+					margin-left: -250px;} /* storleken på statiska diven*/
+				
+	#column-right {	margin-left: 250px; /* storleken på statiska diven. */
+					overflow:hidden;
+					background:url('../images/bk_main.png');
+					background-size:contain;
+					background-repeat:repeat-y; 
+					padding-top:40px;
+					padding-left:40px; 	
+					} 
+	#column-right  h1 {		
+					float:left;
+				
+	}	
+					
+		/** Inställningar för den vänstra kolumnen*
+---------------------------------------------------------------------- */
+	#column-left {	width:100%;
+					height:inherit;
+					}
+					
+	#fixed-width {
+					width: 228px; /* storleken på statiska diven exkl padding. + 8px */
+					background:#333;
+					margin-left:-8px;
+					padding-left:30px;
+					height:inherit;
+					top:0;
+					position: absolute;
+					min-height:800px; 
+					padding-bottom:40px;
+				}
+				
+      /**   MENU   column left**
+------------------------------------*/
+	#logo {
+				margin-top:25px;
+				height:100px;
+				margin-right:10px;
+	}
+	
+	#logo a {
+				padding:0;
+	}
+	
+	#logo img {
+				max-width:100%;
+	}
+	
+	.username {
+		color:#E95D39;	
+		padding:10px;
+		font-weight:bold;
+		cursor:default;
+	}
+	
+	
+	#menu {
+		width:100%; 
+		display:block;
+		height:100%;
+		padding: 10px 0;
+		margin-bottom: 50px;
+		color:#FFF;
+		
+	}
+	
+	#menu ul {
+			overflow:hidden; margin-left:-20px;
+			width:90%;
+			}
+			
+	#menu  li {			
+				margin-left:-1.5em; 
+	}
+	
+	#menu #noInstruments {
+		
+			font-weight:normal;
+			margin-top:15px;
+			text-align:left;
+			font-style:italic;
+	}
+	
+	#menu #mainInstrumentLi {
+			font-style:italic;
+			height:15px;
+			margin-bottom:-10px;
+			margin-top:25px;
+	}
+	#menu a {
+		color:#FFF;	
+		padding:10px;
+		font-weight:bold;
+	}
+
+
+/**   HOMEPAGE   **
+------------------------------------*/	
+#startMessage {
+			 min-width:400px;
+			 width:50%;
+			 text-align: center;
+			 padding-bottom:20px;
+			 float:left;
+}
+
+#startMessage h2 {
+				 font-size:1.8em;
+}
+#startMessage p {
+				font-size:1.3em;
+				line-height:40px;
+}	
+
+/**   SONGLIST   **
+------------------------------------*/	
+	#menu #instrumentBtn {
+				background:#E95D39;
+				font-size:1.3em;
+				padding-left:10px;
+				margin-left:-10px;
+			
+	}
+	
+	#instrumentBtn {
+				margin-top:15px;
+	}
+	
+	#songMenu {
+				
+				margin-bottom:15px;
+				width:100%;
+				
+				
+	}
+	
+	#songMenu li {
+				background:#EBC148;
+				border-bottom:5px solid #333;
+				width:100%;
+	}
+	
+	#songMenu a {
+				color:#333;
+				width:100%;
+	}
+	
+	#songList a {
+				float:left;
+				color:#FFF;
+				background:#E95D39;
+				border-radius:5px;
+				line-height:15px;
+				text-align:center;
+				padding:10px 20px;
+				margin-left:35px;
+				margin-top:20px;
+				width:200px;
+				font-weight:bold;
+	}
+	#songList ul {
+				border-top: 1px solid #333333;
+				float:left;
+				list-style-position: inside;
+				width:100%;
+				height:100%;
+				height: auto !important;
+				padding: 0;
+				margin:0;
+				margin-bottom:20px;
+				
+	}
+	#songList p {
+				line-height:25px;
+				font-style: italic;
+	}
+
+
+	/**   INSTRUMENT LIST   **
+------------------------------------*/	
+	
+	#showAllInstruments #addButton {		
+				float:left;
+				color:#FFF;
+				background:#E95D39;
+				border-radius:5px;
+				line-height:15px;
+				text-align:center;
+				padding:10px 20px;
+				margin-left:35px;
+				margin-top:10px;
+				width:200px;
+				font-weight:bold;
+
+	}
+	
+	#showAllInstruments h1 {
+				display:block;
+				float:left;
+				
+	}
+
+	
+	/** if user has no instruments **/
+	#addInstrumentIfzero {
+				clear:left;		
+	}
+	
+	
+	/** if user has instruments **/
+	#instrumentlist {
+				float:left;
+				list-style-position: inside;
+				width:100%;
+				height:100%;
+				height: auto !important;
+				padding: 0;
+				margin:0;
+	}
+	
+	#instrumentlist input {
+    			float:right;
+    			margin-top:-95px;
+	}
+	
+	#instrumentlist a {
+				text-align:left;
+				font-weight:bold;
+				padding:0;
+				padding-right: 30px;
+				padding-left: 20px;
+				padding-top: 10px;
+				width:50%;
+				max-width:600px;
+				color:#E95D39;				
+	}
+	
+	#instrumentlist .headline {
+				font-size:1.5em; 
+	}
+	#instrumentlist .time {
+				padding:13px;
+				font-weight:normal;
+				line-height:35px;
+	}
+	#instrumentlist p {
+				text-align:left;
+				font-weight:normal;
+				font-size:1.2em; 
+				color:#000;
+				padding-top:10px;
+				margin-bottom:0;
+	}
+		
+	#instrumentlist li {		
+				list-style-type: none;	
+				display:block;
+				float:left;
+				clear:both;
+				width:99%;
+				font-size:1em;		
+				padding:20px 0 25px 0;
+				background: url('../images/even.png') repeat-y;
+				background-size:contain;
+				margin-bottom:25px;
+				border-radius:10px;
+				box-shadow:3px 7px 10px #7c6e62; /*#160b02 */
+				-moz-box-shadow:3px 7px 10px #7c6e62;
+				-webkit-box-shadow:3px 7px 10px #7c6e62;
+	}	
+	
+	
+/*	#instrumentlist li:nth-child(even) { 		
+				background: url('../images/even.png') repeat-y;
+				background-size:contain; 
+	}
+	#instrumentlist li:nth-child(odd) { background: url('../images/even.png') repeat-y;
+				background-size:contain; } */
+
+	
+	article, aside, details, figcaption, figure, main
+	footer, header, hgroup, menu, nav, section{ display: block; } 	
+	
+	
+	/**    FORMS       **
+-------------------------------------------------------------------*/		
+	#addInstrument , #addSong {
+				width:100%;
+				height:100%;
+				padding-left:70px;
+		
+	} 
+	#addInstrument input , #addSong input{ 
+				border:1px solid #333;
+				cursor:text;
+				
+	}
+	
+	#addInstrument h1 , #addSong h1{
+				text-align:left;
+	}
+	
+	#signUpView input {
+				border:1px solid #000;
+				padding:5px;
+				margin-bottom:25px;
+	}
+	
+	#signUpView #submit , #signInView #submit , #addInstrument #submit , #addSong #submit {
+				float:left;
+				color:#FFF;
+				background:#E95D39;
+				border-radius:5px;
+				line-height:10px;
+				text-align:center;
+				padding:10px;
+				margin-top:20px;
+				width:200px;
+				font-weight:bold;
+				border:none;
+				margin-left:0;
+				cursor:pointer;
+	}
+	
+	/**   INSTRUMENT OVERVIEW      **
+-------------------------------------------------------------------*/
+	.deleteBtn, .deleteBtnSong  { 
+				display:block;
+				float:right;
+				font-size:.7em;
+				text-align:center;
+				margin-right:20px;
+				width:100px;
+				height:70px;
+				background: url('../images/buttons.png') no-repeat;
+				text-indent:200%;
+				white-space:nowrap;
+				overflow:hidden;
+				background-position:-200px -80px; 
+		
+		}
+		
+	.chooseMainInstrument, .mainInstrumentDefault {
+					display:block;
+					float:right;
+					margin-right:70px;
+					color:#E95D39;
+					font-weight:bold;
+					margin-top:50px;
+	}
+	.mainInstrumentDefault {
+					margin-right:100px;
+	}
+		
+/**   SONG OVERVIEW      ** TODO-fix textarea!
+-------------------------------------------------------------------*/
+	#songOverview {
+		
+		width:500px;
+	}
+	#songOverview h1 {
+		line-height:25px;
+		padding:10px;
+		display:block;
+		margin-top:-5px;
+	}
+	
+	 .deleteBtnSong {
+		width:100px;
+		height:60px;
+		background: url('../images/buttons.png') no-repeat;
+		text-indent:200%;
+		white-space:nowrap;
+		overflow:hidden;
+		background-position:-200px 0; 
+	}
+	
+	#instrumentBreadcrum {
+					padding:10px; 
+					line-height:25px;
+					width:300px;
+					color:#E95D39;
+					font-weight:bold;
+	}
+	
+	#practiceTime {
+		clear:both;
+	}
+	
+	/** TIMER **/
+	
+	#startTimer, #stopTimer{
+		display:block;
+		width:200px;
+		height:65px;
+		font-size:1.3em;
+		background: url('../images/buttons.png') no-repeat;
+		text-indent:200%;
+		white-space:nowrap;
+		overflow:hidden;
+		cursor:pointer 
+	}
+		
+	#startTimer {
+			background-position:0 0; }
+	#stopTimer {
+			background-position:0 -65px; 
+	}	
+	
+
+	/** NOTES **/
+		
+	#songOverview h3 { 
+			display:block; 
+			clear:left;
+			float:left;
+			line-height:35px; 
+			height:35px;
+			width:100px;
+			padding-left:25px;
+			margin:0;
+			}
+	
+	#songOverview .submit {
+			width:110px;
+			float:right;
+			clear:none; 
+			font-size:1em;
+			padding:10px;
+			padding-bottom:10px;
+			height:40px;
+			line-height:10px;
+			margin-top:17px;
+			border:1px solid #000;
+			margin-right:-10px;
+			
+	}
+	#saveNotes {
+				cursor:pointer;
+	}
+	.saveBtn { 
+			background:#E95D39;
+			width:100px;
+			border:0;
+			font-weight:bold;
+			border-radius: 10px;
+			color:#FFF;
+			}
+			
+	#notes {
+
+		background: url('../images/notes.png');
+		background-repeat:y;
+		background-size:contain;
+		width:500px;
+		max-width:500px;
+		height:300px;
+		max-height:300px;
+		display:block;
+		border:1px solid #000;
+		padding:15px;
+		padding-top:25px;
+		border-radius:20px;
+		clear:left;
+		resize:none;
+		margin-bottom: 10px; 
+		outline: none; 
+		font-size:1.2em;
+	} :hover { outline: none; }
+	
+	.italic {
+			font-style:italic;
+		}	
+		  	
+	
+
+	/**    ERRORMESSAGES       **
+-------------------------------------------------------------------*/
+.errorMessage {
+		padding-bottom:5px;
+		font-weight:bold;
+		color:red;
+		clear:both;
+	}
+	
+	
+	/**    HOMEPAGE       **
+-------------------------------------------------------------------*/	
+	#signUp, #signIn {
+	
+				display:block;
+				float:right;
+				width:250px;
+				font-size:1.6em;
+				text-align:center;
+				padding:10px 20px;
+				padding-right:0px;
+				padding-left: 0px;
+				margin-right:70px;
+				color:#FFF;
+				background:#E95D39;
+				border-radius:5px;
+				line-height:30px;
+				font-weight:bold;
+	}
+	#signUp {
+				margin-top:60px;
+	  
+		
+	}
+	
+	#signIn { 	
+				clear:right;
+				background:#E95D39;
+				margin-top: 20px;
+				line-height:10px;
+				font-size:1em;
+	}
+	
+	#musicbar {
+			width:90%;
+			min-width:600px;
+			height:300px;
+			display:block;
+			clear:both;
+			background: url('../images/musicbar.png');
+			background-size:  100% 100%;
+	}
+	
+	
+	#musicbar ul {
+			height:100%;
+			padding:50px;
+			padding-top:50px;
+			font-weight:bold;
+			margin:0 auto;
+	}
+	#musicbar li {
+			width:90%;
+			padding:10px;
+			text-align:right;
+			font-size:1.3em;
+			line-height:33px;
+			padding-right:60px;
+			font-style:italic;
+	}
+	
+	#musicbar li:nth-child(even) {
+				font-weight:normal;
+				color:#E95D39;
+	}
+	
+	#treble {
+		width:150px;
+		height:330px;
+		float:left;
+		margin-left:50px;
+		margin-top:6px;
+		background: url('../images/treble.png');
+	}
+
+	/**    SIGN IN      **
+-------------------------------------------------------------------*/	
+	#signInView {
+		
+				max-width:350px;
+				
+	}
+	
+	#signInView input{
+		
+				border:1px solid black;
+				padding:5px;
+				
+	}
+	
+	
+	#signInView h2 {
+		
+				max-width:350px;
+				
+	}
+	#signInView p {
+				font-size:1.3em;
+				line-height:30px;
+	}
+	
+	#signInView input{
+				float:none;
+	}
+	
+	#signInView .checkbox {
+		float:left;
+		clear:left;
+		height:30px;
+		width:35px;
+		margin-top:20px;
+		
+	}
+	
+	#signInView .checkbox:focus {	
+		border:none;
+	}
+	
+	/**    INPUTS       **
+-------------------------------------------------------------------*/
+	label {
+		display:block;
+		clear:both;
+	}
+	input {
+		height:30px;
+		width:300px;
+		margin:5px 5px 10px 0;
+		float:left;
+		clear:both;
+	}
+	
+	.submit {
+				background:#E95D39;
+				font-size:1.3em;
+				padding-left:10px;
+				border-radius:10px;
+				border:none;
+				outline:none;
+				color:#FFF;
+				font-family:"Georgia", sans-serif;
+				cursor:pointer;
+	}
+
+	.checkbox {
+		float:left;
+		margin-top:-2px;
+		margin-left:10px;
+	}
