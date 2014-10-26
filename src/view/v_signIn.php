@@ -20,7 +20,7 @@
     // names for the inputs & buttons used in the html-forms
 	private static $uniqueID  = "SignIn::UniqueID";
 	private static $signInBtn  = "SignIn:signInBtn";
-	private static $rememberUser = "SignIn:Remember";
+	private static $rememberUser = "rememberUser";
 	private static $username = "SignIn::Username";
 	private static $password = "SignIn::Password";
 
@@ -110,7 +110,7 @@
 	  <form action='?" . self::$getAction . "=" . self::$actionSignIn ."' method='post'>";
 	  $html .=  "<input type='text' name='". self::$username . "' placeholder='Username' value='".$username."' maxlength='30'>
 	    <input type='password' name='". self::$password. "' placeholder='Password' value='' maxlength='30'>
-	    <input type='checkbox' id='". self::$rememberUser. "' name='". self::$rememberUser. "' class='checkbox'>
+	    <input type='checkbox' id='". self::$rememberUser. "' name='". self::$rememberUser. "' >
 	    <p>Remember me</p>
 	    <input type='submit' value='Sign in' name='". self::$signInBtn. "' id='submit'>
 	  </form>"; 
@@ -123,17 +123,24 @@
 	
 	public function SignOut(){
 		 if ($this->cookieStorage->isCookieSet(self::$uniqueID)) {
-         
+        
 		  // Destroy all cookies
-          $this->cookieStorage->destroy(self::$uniqueID);
-          $this->cookieStorage->destroy(self::$username);
-          $this->cookieStorage->destroy(self::$password);
+          $this->destroyCookies();
 		  
 		  // Remove the cookie file
           $this->fileStorage->removeFile($this->cookieStorage->getCookieValue(self::$uniqueID)); 
 		return true;
         }
 		return false;
+	}
+	
+	public function destroyCookies(){
+		
+		// Destroy all cookies
+          $this->cookieStorage->destroy(self::$uniqueID);
+          $this->cookieStorage->destroy(self::$username);
+          $this->cookieStorage->destroy(self::$password);
+		
 	}
 
 	public function rememberUser(){
@@ -165,9 +172,15 @@
           $this->sessionHelper->setAlert("Inloggning lyckades och vi kommer ihåg dig nästa gång");
         } 
 	}
+	public function getUsernameCookie() {
+		return $this->cookieStorage->getCookieValue(self::$username);
+	}
+	public function getPasswordCookie() {
+		return $this->cookieStorage->getCookieValue(self::$password);
+	}
 	
     public function checkCookies() {
-    	//TODO need to validate cookie with database?
+    	//TODO need to validate cookie with database??maybe not..
 	// $this->cookieStorage->getCookieValue(self::$username) === $this->getUsernameInput() &&
        // $this->cookieStorage->getCookieValue(self::$password) === $this->sessionHelper->encryptString($this->getPasswordInput()))
   
@@ -181,17 +194,13 @@
 	          if (!$this->cookieStorage->isCookieValid($this->cookieStorage->getCookieValue(self::$uniqueID))) {
 	          	
 	            // Destroy all cookies
-	            $this->cookieStorage->destroy(self::$uniqueID);
-	            $this->cookieStorage->destroy(self::$username);
-	            $this->cookieStorage->destroy(self::$password);
+         		 $this->destroyCookies();
 	
 	            // Set an alert
-	            $this->sessionHelper->setAlert("Felaktig information i cookie.");
+	            $this->sessionHelper->setAlert("Wrong information in cookie.");
 	            return false;
 	          }
-	
-	          // All valid and good? Then log in user
-	          $this->sessionHelper->setAlert("Inloggning lyckades via cookies."); //TODO remove
+
 	          return true;
 			 }
       	   else {
@@ -201,7 +210,7 @@
           $this->cookieStorage->destroy(self::$password);
 		  
           // Set an alert
-          $this->sessionHelper->setAlert("Felaktig information i cookie.");
+          $this->sessionHelper->setAlert("Wrong information in cookie.");
           return false;
         }
       } else {

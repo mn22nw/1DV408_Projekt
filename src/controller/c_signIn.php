@@ -19,7 +19,7 @@
       $this->sessionHelper = new \helper\SessionHelper();
     }
 
-    public function viewPage() {
+    public function viewPage() {   
     	
 	  // Check if user is signed in with session or with cookies
       if ($this->model->userIsSignedIn() || $this->view->checkCookies()) {
@@ -31,12 +31,16 @@
 			   * OR if user was signed in with cookies, sign out and destroy cookies (in view)
 			   */
 	          if ($this->model->signOut() || $this->view->signOut()) {
+	          	$this->view->destroyCookies();
 	            $this->signedInStatus = false;
 				// Set alert message
 	       		$this->sessionHelper->setAlert("You have signed out successfully."); 
 			  return $this->view->showHomepage();
 	          }
 
+			if($this->view->checkCookies()){  
+				$this->sessionHelper->setUsername($this->view->getUsernameCookie());
+			}
         }
 
       // User is signed in and didn't press sign out
@@ -45,7 +49,7 @@
       
       else {	 
 	  		$this->signedInStatus = false;    
-		  
+
 		    // if user tried to sign in 
 	  		if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
 	       

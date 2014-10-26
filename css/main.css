@@ -601,16 +601,17 @@
 				float:none;
 	}
 	
-	#signInView .checkbox {
+	#signInView #rememberUser {
 		float:left;
 		clear:left;
 		height:30px;
 		width:35px;
 		margin-top:20px;
+		cursor:pointer;
 		
 	}
 	
-	#signInView .checkbox:focus {	
+	#signInView #rememberUser:focus {	
 		border:none;
 	}
 	

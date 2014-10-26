@@ -75,8 +75,8 @@
       * @return boolval
       */
     public function destroy($name) {
-      setcookie($name, "", time() -1, "/");
-
+     if (isset($_COOKIE[$name]))
+      	setcookie($name, "", time() -1, "/");
       return true;
     }
   }
