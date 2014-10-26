@@ -173,7 +173,7 @@ class InstrumentView {
 					$checked = "";
 				}
 				
-				$html .= "<input type='radio' name='".self::$mainInstrument."' value='".$instrument->getInstrumentID() . "' " . $checked ."/></li>"; 
+				$html .= "<input type='radio' name='".self::$mainInstrument."' value='".$instrument->getInstrumentID() . "' " . $checked ." id='radioBtn'/></li>"; 
 				
 			}; 
 			

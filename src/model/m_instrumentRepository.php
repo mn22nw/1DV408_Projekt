@@ -58,14 +58,16 @@ class InstrumentRepository extends base\Repository {
 				$instrumentID = $db->lastInsertId(); 
 				
 				$mainInstrumentID = $this->getMainInstrument($username);
+			
+				
 				// If main instrument is 0,  set main-instrument id to the same id as first added instrument!
-				if ($mainInstrument == 0)
+				if ($mainInstrumentID == 0)
 					$this->updateMainInstrument($instrumentID, $username); 
 				
 				return $instrumentID;		
 	}
 
-	public function get($instrumentID) {  // TODO- denna är när man klickat pa en song
+	public function get($instrumentID) {  // This is used if you click on a song
 		
 		$db = $this -> connection();
 
@@ -80,7 +82,7 @@ class InstrumentRepository extends base\Repository {
 		if ($result) {
 			$instrument = new \model\Instrument( $result[self::$name], null, $result[self::$instrumentID]);
 			
-			$sql = "SELECT * FROM ".self::$songTable. " WHERE ".SongRepository::$instrumentID." = ?";  //TODO - check songrepository!
+			$sql = "SELECT * FROM ".self::$songTable. " WHERE ".SongRepository::$instrumentID." = ?";  
 			$query = $db->prepare($sql);
 			$query->execute (array($result[self::$instrumentID]));
 			$songs = $query->fetchAll();

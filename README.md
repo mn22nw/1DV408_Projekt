@@ -1,13 +1,16 @@
 Projekt - Music Logbook
 ======================
 
-## Länk till körbar applikation
+### Länk till körbar applikation
 
 [Music Logbook](http://mianygren.nu/MusicLogbook)
 
-### Användarfall/Vision 
+### Användarfall
 
-[Användarfall/Vision](http://www.mianygren.nu/PHP-1DV408/Projekt/Vision_Anv%C3%A4ndarfall.pdf)
+- [Användarfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Anv%C3%A4ndarfall.pdf)
+  *Jag implementerade även att man kan välja huvudinstument + registrera användare*
+  *(Dessa hann jag inte lägga till som användarfall i efterhand)*
+  *Användarfall 10 - Rate progress hann jag inte med att implementera.*
 
 ### Klassdiagram
 
@@ -16,19 +19,20 @@ Projekt - Music Logbook
 ### Testfall 
 
 - [Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
+*Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen*
 - [Testrapport](http://mianygren.nu/MusicLogbook)
 
 
 ### Checklista för release på nytt webbhotell
 * Ladda upp samtliga filer och mappar med deras innehåll på er server. Dessa är:
-	(Filer utanför mappar:)
-		-index.php
-		-Settings.php
-	 	-errors.log
- 	(Mappar:)
- 		 -css
- 		 -helpers
- 		 -src
+	- (Filer utanför mappar:)
+		- index.php
+		- Settings.php
+	 	- errors.log
+ 	- (Mappar:)
+ 		 - css
+ 		 - helpers
+ 		 - src
  		 -db
   	  
 * Importera databasen musiclogbook.sql till er databas för webhotellet. 

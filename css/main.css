@@ -211,6 +211,7 @@
 				
 	}
 
+	#showAllInstruments #radioBtn {cursor:pointer;}
 	
 	/** if user has no instruments **/
 	#addInstrumentIfzero {

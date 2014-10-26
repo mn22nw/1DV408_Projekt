@@ -100,7 +100,7 @@ class SongController {
 			
 			if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
 								
-				$this->timer->start();				 						
+				$this->sessionHelper->setTimerStartTime($this->timer->start());				 						
 			}							
 			
 			return $this->showSong(true); 
@@ -121,16 +121,18 @@ class SongController {
 			// get songID 
 			$songID = $this->songView->getSongID();
 			
-			// get practiced time from DB
+			// get practiced time from DB (it's in hours in db to save space)
 			$practicedTime = $this->songRepository->getPracticedTime($songID);
 			
-				
-				$this->timer->stop();
+			//get the start time from session 
+			$startTime = $this->sessionHelper->getTimerStartTime();
+			
+			//get the time when timer was stopped	
+				$stopTime =  $this->timer->stop();
 			 
-				$duration =  $this->timer->elapsed();
+				$duration = $stopTime - $startTime;
 
 				$seconds = $duration/1000000;					
-				//return $seconds;
 				
 				//round will not work if number contains -
 				$seconds = explode("-",$seconds);

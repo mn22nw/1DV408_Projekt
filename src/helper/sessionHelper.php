@@ -7,6 +7,7 @@
 	private static $sessionName = 'name';
 	private static $username = 'username';
 	private static $ceatedUsername = 'ceatedUsername';  
+	private static $timerStart = 'timerStart';
 
     /**
       * Get an alert from the session alert system
@@ -121,6 +122,22 @@ public function getCreatedUsername() {
       return $ret;
     }
 
+// FUNCTIONS FOR TIMER //
+	
+	public function setTimerStartTime($startTime) {
+		$_SESSION[self::$timerStart] = $startTime;
+      	return true;
+	}
+	public function getTimerStartTime() {
+      if (isset($_SESSION[self::$timerStart])) {
+        $ret = $_SESSION[self::$timerStart];
+        unset($_SESSION[self::$timerStart]);
+      } else {
+        $ret = "";
+      }
+
+      return $ret;
+    }
 
 //FUNCTIONS TO MAKE SAFE AND ENCRYPT //
 

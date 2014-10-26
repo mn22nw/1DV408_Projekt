@@ -80,8 +80,8 @@ class NavigationView {
 		$view = new \view\NavigationView();
 		// RENDER THE 'MENU' with songs
 		
-		$menu  = "<li id='mainInstrumentLi'>Main instrument</li>";
-		$menu .= $view->getInstrumentButton($instrument);
+		//$menu  = "<li id='mainInstrumentLi'>Main instrument</li>";
+		$menu = $view->getInstrumentButton($instrument);
 		
 		if (empty($songArray)) {
 			$menu .= "<li id='noInstruments'>You have no songs <br /> for this intrument yet!</li>";
