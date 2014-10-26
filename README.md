@@ -22,7 +22,7 @@ Projekt - Music Logbook
 
 - [Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
 *(Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen)*
-- [Testrapport](http://mianygren.nu/MusicLogbook)
+- [Testrapport](http://www.mianygren.nu/PHP-1DV408/Projekt/Testrapport.pdf) 
 
 
 ### Checklista för release på nytt webbhotell
