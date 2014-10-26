@@ -37,11 +37,10 @@
 	       		$this->sessionHelper->setAlert("You have signed out successfully."); 
 			  return $this->view->showHomepage();
 	          }
-
-			if($this->view->checkCookies()){  
+        }
+		if($this->view->checkCookies()){  
 				$this->sessionHelper->setUsername($this->view->getUsernameCookie());
 			}
-        }
 
       // User is signed in and didn't press sign out
       $this->signedInStatus = true;
