@@ -12,7 +12,6 @@ Projekt - Music Logbook
 
   *Jag implementerade även att man kan välja huvudinstument + registrera användare*
   *(Dessa hann jag inte lägga till som användarfall i efterhand)*
-  *Användarfall 10 - Rate progress hann jag inte med att implementera.*
 
 ### Klassdiagram
 
