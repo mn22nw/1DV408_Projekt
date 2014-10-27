@@ -25,7 +25,7 @@ Projekt - Music Logbook
 *(Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen)*
 - [Testrapport](http://www.mianygren.nu/PHP-1DV408/Projekt/Testrapport.pdf) 
 
-**har fixat timer-bugg, som ej gick igenom i testfallet, har inte commitat til github med det fungerar i den körbara versionen)*
+**har fixat timer-bugg, som ej gick igenom i testfallet, har inte commitat ändringen till github men det fungerar i den körbara versionen)*
 
 
 ### Checklista för release på nytt webbhotell
