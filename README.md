@@ -6,6 +6,8 @@ Projekt - Music Logbook
 **Använd CHROME som webbläsare för testning (funkar i Firefox men ser inte lika bra ut)**
 - [Music Logbook](http://mianygren.nu/MusicLogbook)
 
+- *Användarnamn:User Lösen:Password*
+
 ### Användarfall
 
 - [Användarfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Anv%C3%A4ndarfall.pdf)
@@ -22,6 +24,8 @@ Projekt - Music Logbook
 - [Testfall](http://www.mianygren.nu/PHP-1DV408/Projekt/Testfall.pdf)
 *(Har ej skrivit testfall för de implementationer som inte finns med bland användarfallen)*
 - [Testrapport](http://www.mianygren.nu/PHP-1DV408/Projekt/Testrapport.pdf) 
+
+*har fixat timer-bugg, som ej gick igenom i tesfallet, har inte commitat til github med det fungerar i den körbara versionen)
 
 
 ### Checklista för release på nytt webbhotell
